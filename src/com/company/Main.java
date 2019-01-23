@@ -8,6 +8,8 @@ public class Main {
 //    Declare an array named dailyAverageTemp
 //    Instruct the user to input daily average temperatures (in degrees Fahrenheit) for 7 days
 //    Each time the user inputs a value, add it to your dailyAverageTemp array
+//    Next, your program should print out the weekly average temperature
+//    (e.g., the average of the averages)
 
     public static void main(String[] args) {
         int averageTempArraySize = 7;
@@ -25,11 +27,19 @@ public class Main {
 
         }
 
+        double input = 7;
+        double sum = 0;
+        double weeklyAverage=0;
+
+
         for (int i=0; i<dailyAverageTemp.length; i++){
             System.out.println(dailyAverageTemp [i]);
-
+            sum = sum + dailyAverageTemp [i];
+            weeklyAverage = sum/input;
         }
 
+        System.out.println ("The sum is " + sum);
+        System.out.println ("The average is " + weeklyAverage);
     }
 
 
