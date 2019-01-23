@@ -21,7 +21,6 @@ public class Main {
         Scanner reader = new Scanner(System.in);
 
         double [] dailyAverageTempF = new double [averageTempFArraySize];
-        double [] dailyAverageTempC = new double [averageTempCArraySize];
 
 
         for (int i=0; i< averageTempFArraySize; i++){
@@ -47,6 +46,7 @@ public class Main {
              tempFtoC = (j-32)/ 1.8;
              System.out.println("The temperature from F to C is " + tempFtoC);
         }
+        double[] dailyAverageTempC = {tempFtoC};
 
         System.out.println ("The sum is " + sum);
         System.out.println ("The average is " + weeklyAverage);
