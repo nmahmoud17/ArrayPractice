@@ -33,23 +33,44 @@ public class Main {
 
         double input = 7;
         double sum = 0;
-        double weeklyAverage=0;
+        double sum2= 0;
+        double weeklyAverageF=0;
+        double weeklyAverageC=0;
         double tempFtoC=0;
+
 
         for (int i=0; i<dailyAverageTempF.length; i++){
             System.out.println(dailyAverageTempF [i]);
             sum = sum + dailyAverageTempF [i];
-            weeklyAverage = sum/input;
+            weeklyAverageF = sum/input;
         }
+        System.out.println("Above is the average F Temp for 7 days " + "\n");
 
+        //converting temperature from F to C
         for (double j: dailyAverageTempF) {
              tempFtoC = (j-32)/ 1.8;
-             System.out.println("The temperature from F to C is " + tempFtoC);
+             System.out.println(tempFtoC);
         }
+        System.out.println("Above is the average C Temp for 7 days " + "\n");
+        System.out.println("\n");
+
+        //creating Array that holds conversions from last section
         double[] dailyAverageTempC = {tempFtoC};
 
-        System.out.println ("The sum is " + sum);
-        System.out.println ("The average is " + weeklyAverage);
+        for (int i=0; i<dailyAverageTempC.length; i++){
+            sum2 = sum2 + dailyAverageTempC [i];
+            weeklyAverageC = sum2/input;
+        }
+
+        System.out.println("\n");
+        System.out.println("-------------------------------------------------------------");
+
+        System.out.println ("The sum of all Fahrenheit temps is  " + sum);
+        System.out.println ("The sum of all Celsius temps is  " + sum2);
+        System.out.println ("The weekly average of Fahrenheit temps is " + weeklyAverageF);
+        System.out.println ("The weekly average of Celsius temps is " + weeklyAverageC);
+
+
     }
 
 
