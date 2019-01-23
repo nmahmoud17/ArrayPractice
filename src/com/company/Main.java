@@ -10,15 +10,27 @@ public class Main {
 //    Each time the user inputs a value, add it to your dailyAverageTemp array
 
     public static void main(String[] args) {
+        int averageTempArraySize = 7;
+
         Scanner reader = new Scanner(System.in);
 
-        double [] dailyAverageTemp = new double [6];
-        System.out.println("Please enter the daily average temperature " +
-                "(in degrees Fahrenheit) for the last 7 days  ");
+        double [] dailyAverageTemp = new double [averageTempArraySize];
 
-        double answerForTemp = reader.nextDouble();
 
-        answerForTemp = dailyAverageTemp [0];
-        System.out.println(answerForTemp);
+        for (int i=0; i< averageTempArraySize; i++){
+            System.out.println("Please enter the daily average temperature " +
+                    "(in degrees Fahrenheit) for the last 7 days  ");
+            double userInput = reader.nextDouble();
+            dailyAverageTemp[i]=userInput;
+
+        }
+
+        for (int i=0; i<dailyAverageTemp.length; i++){
+            System.out.println(dailyAverageTemp [i]);
+
+        }
+
     }
+
+
 }
